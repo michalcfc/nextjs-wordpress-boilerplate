@@ -1,48 +1,41 @@
-import { PageWrapper } from '@/components/common/Page';
+import {
+  PageWrapper,
+} from '@/components/common/Page';
+import { OurValuesSection } from '@/components/Sections/OurValuesSection';
+import {
+  AboutSection,
+  FaqSection,
+  NumbersSections,
+  ProcessSection,
+} from '@/components/Sections';
 
-import { getPageByUri } from '@/lib/pages';
-
-interface AboutPageD {
-  data: {
-    page: any;
-  };
-}
-const About = ({ data }: AboutPageD) => (
+const About = () => (
   <PageWrapper
-    pageTitle="O nas"
-    seoTitle="O nas"
-    seoDesc="O nas"
-    canonical="https://www.jachimov.pl/"
+    pageTitle="About"
+    seoTitle="About"
+    seoDesc="About"
+    canonical="https://www.icoding.pl/"
     op={{
       url: '/og-image.png',
-      title: 'O nas',
-      desc: 'O nas',
+      title: 'My portfolio',
+      desc: 'My portfolio',
       img: [
         {
           url: '/og-image.png',
           width: 800,
           height: 420,
-          alt: 'O nas',
+          alt: 'my portfolio',
         },
       ],
     }}
   >
-    <div
-      className="about"
-      dangerouslySetInnerHTML={{ __html: data?.page?.content }}
-    />
+    <AboutSection />
+    <NumbersSections />
+    <ProcessSection />
+    <OurValuesSection />
+    <FaqSection title="Why us?" />
   </PageWrapper>
 );
 
 export default About;
 About.Layout = 'Main';
-
-export const getStaticProps = async () => {
-  const data = await getPageByUri('/about');
-
-  return {
-    props: {
-      data,
-    },
-  };
-};
