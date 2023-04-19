@@ -110,19 +110,25 @@ export const getStaticProps: GetStaticProps = async ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  // Bypass pre-rendering at build time.
+  if (process.env.DISABLE_STATIC_SITE_GENERATION === 'true') {
+    return {
+      paths: [],
+      fallback: 'blocking',
+    };
+  }
+
+  // Query all pages for static site generation.
   const { pages } = await getAllPages({
     queryIncludes: 'index',
   });
 
-  const paths = [] as any;
-
-  pages?.filter(({ uri }: { uri: string }) => typeof uri === 'string' && uri !== '/')
-    // eslint-disable-next-line array-callback-return
-    .map(({ slug }: { slug: string }) => {
-      if (!slug && !isCustomPageUri(slug)) {
-        paths.push({ params: { slug } });
-      }
-    });
+  const paths = pages.filter(({ slug }: { slug: string }) => !slug && !isCustomPageUri(slug))
+    .map(({ slug }: { slug: string }) => ({
+      params: {
+        slug: [slug],
+      },
+    }));
 
   return {
     paths,
