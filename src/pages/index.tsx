@@ -8,7 +8,7 @@ const HomePage = () => (
     <Hero
       strap="Profesjonalne video"
       title="Montaż filmów na najwyższym poziomie"
-      primary_cta={{ name: 'Wyślij materiały', uri: '/offer' }}
+      primary_cta={{ name: 'Learn more', uri: '/o-nas' }}
       img="/img/hero.png"
       subtitle="Oferujemy profesjonalne usługi montażu filmów dla klientów biznesowych oraz prywatnych."
     />

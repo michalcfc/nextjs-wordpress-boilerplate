@@ -22,7 +22,7 @@ const SendFilesBtn = ({ isSolid, ...rest }: SendFilesBtnD) => (
     }}
     {...rest}
   >
-    Wyślij pliki
+    Learn more
   </Button>
 );
 
