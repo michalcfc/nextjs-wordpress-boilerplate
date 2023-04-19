@@ -6,7 +6,7 @@ import { DataD } from '@/types/data';
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<DataD>
+  res: NextApiResponse<DataD>,
 ) {
   const filePath = path.join(process.cwd(), 'src/data/data.json');
   const jsonData = await fsPromises.readFile(filePath);
