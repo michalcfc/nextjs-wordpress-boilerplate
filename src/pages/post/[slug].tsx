@@ -29,10 +29,8 @@ const PostPage = ({ post }: PostD) => {
       op={
           {
             url: '/og-image.png',
-            title:
-          'My portfolio',
-            desc:
-          'My portfolio',
+            title: 'My portfolio',
+            desc: 'My portfolio',
             img:
           [
             {
@@ -45,8 +43,7 @@ const PostPage = ({ post }: PostD) => {
           }
         }
     >
-      sample
-      post
+      sample post
     </PageWrapper>
   );
 };
