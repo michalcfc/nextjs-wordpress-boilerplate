@@ -113,10 +113,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
     queryIncludes: 'index',
   });
 
-  console.log(pages);
   const paths = [] as any;
 
-  pages?.map(({ slug }: { slug: string }) => paths.push({ params: { slug } }));
+  pages?.filter(({ uri }: { uri: string }) => typeof uri === 'string' && uri !== '/')
+    .map(({ slug }: { slug: string }) => paths.push({ params: { slug } }));
 
   return {
     paths,
