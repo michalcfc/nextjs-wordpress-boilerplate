@@ -114,11 +114,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   });
 
   console.log(pages);
-  const paths = [];
+  const paths = [] as any;
 
-  for (const product of pages) {
-    paths.push({ params: { slug: product.slug } });
-  }
+  pages?.map(({ slug }: { slug: string }) => paths.push({ params: { slug } }));
 
   return {
     paths,
