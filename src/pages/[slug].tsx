@@ -4,7 +4,6 @@ import {
   GetStaticProps,
 } from 'next';
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
-import path from 'path';
 import { PageWrapper } from '@/components/common/Page';
 import {
   Page,
