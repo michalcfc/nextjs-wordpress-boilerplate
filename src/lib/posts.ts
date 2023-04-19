@@ -145,7 +145,7 @@ export async function getPostBySlug(slug: string) {
       publisher: seo.opengraphPublisher,
       title: seo.opengraphTitle,
       type: seo.opengraphType,
-      url: seo.url,
+      url: seo.url ?? '',
     };
 
     post.article = {
@@ -192,7 +192,7 @@ export async function getAllPosts(options = {}) {
   const posts = data?.data.posts.edges.map(({ node = {} }) => node);
 
   return {
-    posts: Array.isArray(posts) && posts.map(mapPostData),
+    posts: posts.map(mapPostData),
   };
 }
 
