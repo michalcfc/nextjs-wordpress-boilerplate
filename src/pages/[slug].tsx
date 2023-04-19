@@ -16,6 +16,7 @@ import {
   getPageByUri,
 } from '@/lib/pages';
 import { PageSeoD } from '@/lib/types';
+import { isCustomPageUri } from '@/utils/isCustomPageUri';
 
 type AboutPageD = {
   page: Page & PageSeoD
@@ -116,7 +117,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = [] as any;
 
   pages?.filter(({ uri }: { uri: string }) => typeof uri === 'string' && uri !== '/')
-    .map(({ slug }: { slug: string }) => paths.push({ params: { slug } }));
+    // eslint-disable-next-line array-callback-return
+    .map(({ slug }: { slug: string }) => {
+      if (!slug && !isCustomPageUri(slug)) {
+        paths.push({ params: { slug } });
+      }
+    });
 
   return {
     paths,
