@@ -8,6 +8,7 @@ import {
   NumbersSections,
   ProcessSection,
 } from '@/components/Sections';
+import { getPageByUri } from '@/lib/pages';
 
 const About = () => (
   <PageWrapper
@@ -39,3 +40,13 @@ const About = () => (
 
 export default About;
 About.Layout = 'Main';
+
+export const getStaticProps = async () => {
+  const about = await getPageByUri('/about');
+
+  return {
+    props: {
+      about,
+    },
+  };
+};

@@ -9,6 +9,7 @@ import {
 } from '@/components/common/Page';
 import { ContactForm } from '@/components/ContactForm';
 import { ContactDetails } from '@/components/ContactDetails';
+import { getPageByUri } from '@/lib/pages';
 
 const Contact = () => (
   <PageWrapper
@@ -48,3 +49,13 @@ const Contact = () => (
 
 export default Contact;
 Contact.Layout = 'Main';
+
+export const getStaticProps = async () => {
+  const about = await getPageByUri('about');
+
+  return {
+    props: {
+      about,
+    },
+  };
+};
