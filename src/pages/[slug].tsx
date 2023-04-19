@@ -4,6 +4,7 @@ import {
   GetStaticProps,
 } from 'next';
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
+import path from 'path';
 import { PageWrapper } from '@/components/common/Page';
 import {
   Page,
@@ -113,9 +114,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
     queryIncludes: 'index',
   });
 
-  const paths = pages.map(({ slug }: any) => ({
-    params: { slug },
-  }));
+  console.log(pages);
+  const paths = [];
+
+  for (const product of pages) {
+    paths.push({ params: { slug: product.slug } });
+  }
 
   return {
     paths,
