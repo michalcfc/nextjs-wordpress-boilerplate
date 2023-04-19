@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /**
  * postPathBySlug
  */
@@ -12,28 +14,68 @@ import {
   QUERY_POSTS_BY_AUTHOR_SLUG_INDEX,
   QUERY_POSTS_BY_CATEGORY_ID,
   QUERY_POSTS_BY_CATEGORY_ID_ARCHIVE,
-  QUERY_POSTS_BY_CATEGORY_ID_INDEX
-} from "@/lib/queries/posts";
-import client from "@/lib/api";
-import { updateUserAvatar } from "@/lib/users";
-import { sortObjectsByDate } from "@/lib/datetime";
+  QUERY_POSTS_BY_CATEGORY_ID_INDEX,
+} from '@/lib/queries/posts';
+import client from '@/lib/api';
+import { updateUserAvatar } from '@/lib/users';
+import { sortObjectsByDate } from '@/lib/datetime';
 import {
   Category,
   Post,
   PostToCategoryConnectionEdge,
-  User
-} from "@/generated/graphql";
+} from '@/generated/graphql';
 import {
   PostByAuthorD,
   PostByCategoryD,
   PostByRecentD,
   PostSeoD,
-  QueryIncludeD
-} from "@/lib/types";
-import { Author } from "next-seo/lib/types";
+  QueryIncludeD,
+} from '@/lib/types';
 
 export function postPathBySlug(slug: string) {
   return `/posts/${slug}`;
+}
+
+/**
+ * mapPostData
+ */
+
+export function mapPostData(post = {}) {
+  const data = { ...post } as Post;
+
+  // Clean up the author object to avoid someone having to look an extra
+  // level deeper into the node
+
+  if (data.author) {
+    data.author = {
+      ...data.author.node,
+    };
+  }
+
+  // The URL by default that comes from Gravatar / WordPress is not a secure
+  // URL. This ends up redirecting to https, but it gives mixed content warnings
+  // as the HTML shows it as http. Replace the url to avoid those warnings
+  // and provide a secure URL by default
+
+  if (data.author?.avatar) {
+    data.author.avatar = updateUserAvatar(data.author.avatar);
+  }
+
+  // Clean up the categories to make them easier to access
+
+  if (data.categories) {
+    data.categories = (data.categories.edges.map(({ node }: PostToCategoryConnectionEdge) => ({
+      ...node,
+    })));
+  }
+
+  // Clean up the featured image to make them easier to access
+
+  if (data.featuredImage) {
+    data.featuredImage = data.featuredImage.node;
+  }
+
+  return data;
 }
 
 /**
@@ -103,6 +145,7 @@ export async function getPostBySlug(slug: string) {
       publisher: seo.opengraphPublisher,
       title: seo.opengraphTitle,
       type: seo.opengraphType,
+      url: seo.url,
     };
 
     post.article = {
@@ -140,7 +183,7 @@ const allPostsIncludesTypes = {
 };
 
 export async function getAllPosts(options = {}) {
-  const { queryIncludes = 'index' } = options  as QueryIncludeD;
+  const { queryIncludes = 'index' } = options as QueryIncludeD;
 
   const data = await client.query({
     query: allPostsIncludesTypes[queryIncludes],
@@ -162,7 +205,6 @@ const postsByAuthorSlugIncludesTypes = {
   archive: QUERY_POSTS_BY_AUTHOR_SLUG_ARCHIVE,
   index: QUERY_POSTS_BY_AUTHOR_SLUG_INDEX,
 };
-
 
 export async function getPostsByAuthorSlug({ slug, ...options }: PostByAuthorD) {
   const { queryIncludes = 'index' } = options;
@@ -263,64 +305,15 @@ export function sanitizeExcerpt(excerpt: any) {
 }
 
 /**
- * mapPostData
- */
-
-export function mapPostData(post = {}) {
-  const data = { ...post }  as Post extends User;
-
-  // Clean up the author object to avoid someone having to look an extra
-  // level deeper into the node
-
-  if (data.author) {
-    data.author = {
-      ...data.author.node,
-    }
-  }
-
-  // The URL by default that comes from Gravatar / WordPress is not a secure
-  // URL. This ends up redirecting to https, but it gives mixed content warnings
-  // as the HTML shows it as http. Replace the url to avoid those warnings
-  // and provide a secure URL by default
-
-  if (data.author?.avatar) {
-    data.author.avatar = updateUserAvatar(data.author.avatar);
-  }
-
-  // Clean up the categories to make them easier to access
-
-  if (data.categories) {
-    data.categories = (data.categories.edges.map(({ node }: PostToCategoryConnectionEdge) => {
-      return {
-        ...node,
-      };
-    }));
-  }
-
-  // Clean up the featured image to make them easier to access
-
-  if (data.featuredImage) {
-    data.featuredImage = data.featuredImage.node;
-  }
-
-  return data;
-}
-
-/**
  * getRelatedPosts
  */
 
-type TestD = {
-  postId: number
-  category: Category
-
-}
 export async function getRelatedPosts(categories: Category[], postId: number, count = 5) {
   if (!Array.isArray(categories) || categories.length === 0) return;
 
   let related = {
     category: categories && categories.shift(),
-  } as Post extends Category;
+  } as Post;
 
   if (related.category) {
     const { posts } = await getPostsByCategoryId({
@@ -328,20 +321,23 @@ export async function getRelatedPosts(categories: Category[], postId: number, co
       queryIncludes: 'archive',
     });
 
-    const filtered = (posts as Post[]).filter(({ postId: id }: { postId: number}) => id !== postId);
+    const filtered = (posts as Post[])
+      .filter(({ postId: id }: { postId: number }) => id !== postId);
     const sorted = sortObjectsByDate(filtered);
 
     related.posts = sorted.map((post: Post) => ({ title: post.title, slug: post.slug }));
   }
 
   if (!Array.isArray(related.posts) || related.posts.length === 0) {
-    const relatedPosts = await getRelatedPosts(categories, postId, count)
+    const relatedPosts = await getRelatedPosts(categories, postId, count);
     related = relatedPosts || related;
   }
 
   if (Array.isArray(related.posts) && related.posts.length > count) {
+    // eslint-disable-next-line consistent-return
     return related.posts.slice(0, count);
   }
 
+  // eslint-disable-next-line consistent-return
   return related;
 }
