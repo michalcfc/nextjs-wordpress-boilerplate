@@ -113,10 +113,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
     queryIncludes: 'index',
   });
 
-  console.log(pages);
+  const paths = pages.map(({ slug }: any) => ({
+    params: { slug },
+  }));
 
   return {
-    paths: [{ params: { slug: 'sample' } }],
-    fallback: true,
+    paths,
+    fallback: 'blocking',
   };
 };
