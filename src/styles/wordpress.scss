@@ -1,0 +1,80 @@
+.wp-container-3
+.wp-container-3 {
+  justify-content:flex-end;
+}
+
+.wp-container-7
+.wp-container-7 {
+  flex-wrap:nowrap;
+  align-items:flex-end;
+  justify-content:space-between;
+}
+
+.wp-container-10
+.wp-container-10 {
+  flex-wrap:nowrap;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.wp-container-19
+.wp-container-19 {
+  flex-wrap:nowrap;
+}
+
+.wp-container-4 .wp-container-4,
+.wp-container-23  .wp-container-23 {
+  justify-content:space-between;
+}
+
+.wp-container-13 .wp-container-13,
+.wp-container-16 .wp-container-16 {
+  flex-wrap:nowrap;
+  justify-content:space-between;
+}
+
+.has-small-font-size {
+  font-size: 16px;
+}
+
+.has-medium-font-size {
+  font-size: 20px;
+}
+
+.has-large-font-size {
+  font-size: 24px;
+}
+
+.has-x-large-font-size {
+  font-size: 30px;
+}
+
+.has-background {
+  padding: 1rem;
+}
+
+.is-layout-flex {
+  display: flex;
+  align-items: center;
+  & > * {
+    margin: 0
+  }
+}
+
+
+.has-text-align-center {
+  text-align: center;
+}
+
+.is-content-justification-space-between {
+  justify-content: space-between;
+}
+
+.wp-block-columns {
+  gap: 1.5rem
+}
+
+.alignwide {
+  margin: 0 auto;
+  max-width: 1200px;
+}

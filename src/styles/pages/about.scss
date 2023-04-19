@@ -1,0 +1,58 @@
+.about {
+  --wp--preset--spacing--20: 0.44rem;
+  --wp--preset--spacing--30: 0.67rem;
+  --wp--preset--spacing--40: 1rem;
+  --wp--preset--spacing--50: 1.5rem;
+  --wp--preset--spacing--60: 2.25rem;
+  --wp--preset--spacing--70: 3.38rem;
+  --wp--preset--spacing--80: 5.06rem;
+  all: revert;
+
+  * {
+    all: revert;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  .has-small-font-size {
+    font-size: 16px;
+  }
+
+  .has-medium-font-size {
+    font-size: 20px;
+  }
+
+  .has-large-font-size {
+    font-size: 24px;
+  }
+
+  .has-x-large-font-size {
+    font-size: 30px;
+  }
+}

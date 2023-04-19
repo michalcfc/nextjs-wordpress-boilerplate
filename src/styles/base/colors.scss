@@ -1,0 +1,34 @@
+$foreground-color: #000000;
+$background-color: #fff;
+$primary-color: #1a4548;
+$secondary-color: #ffe2c7;
+$tertiary-color: #F6F6F6;
+$brand-color: #c8ff62;
+
+.has-vivid-red-color {
+  color: red
+}
+
+.has-foreground-background-color {
+  background: $foreground-color;
+}
+
+.has-background-color {
+  background: $background-color
+}
+
+.has-primary-background-color {
+  background: $primary-color;
+}
+
+.has-secondary-background-color {
+  background: $secondary-color
+}
+
+.has-tertiary-background-color {
+  background: $tertiary-color;
+}
+
+.has-brand-color {
+  background: $brand-color;
+}

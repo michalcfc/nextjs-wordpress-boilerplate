@@ -1,0 +1,39 @@
+.swiper {
+  padding-bottom: 50px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: black !important;
+  width: 45px !important;
+  height: 45px !important;
+  font-size: 1rem;
+  background: white;
+  border-radius: 99px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1rem !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #c8ff62 !important;
+}
+
+
+.dark-swiper .swiper-pagination-bullet {
+  background: white !important;
+}
+
+.dark-swiper .swiper-pagination-bullet-active {
+  background: #c8ff62 !important;
+}
+
+.swiper-pagination-bullet-active {
+  border-radius: 10px !important;
+  background: black !important;
+  width: 16px !important;
+}

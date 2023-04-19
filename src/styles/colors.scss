@@ -1,0 +1,95 @@
+$black-color: #000;
+$white-color: #FFF;
+$muted-color: #7a7a7a;
+$pale-pink-color: #F78DA7;
+$vivid-red-color: #CF2E2E;
+$luminous-vivid-orange-color: #FF6900;
+$luminous-vivid-amber-color: #FCB900;
+$light-green-cyan-color: #7BDCB5;
+$vivid-green-cyan-color: #00D084;
+$pale-cyan-blue-color: #8ED1FC;
+$vivid-cyan-blue-color: #0693E3;
+$vivid-purple-color: #9B51E0;
+$cyan-bluish-gray-color: #abb8c3;
+$foreground-color: #000;
+$background-color: #fff;
+$primary-color: #1a4548;
+$secondary-color: #ffe2c7;
+$tertiary-color: #F6F6F6;
+$brand-color: #c8ff62;
+
+.has-black-color {
+  color: $black-color
+}
+
+.has-white-color {
+  color: $white-color;
+}
+
+.has-muted-color {
+  color: $muted-color;
+}
+
+.has-pale-pink-color {
+  color: $pale-pink-color
+}
+
+.has-vivid-red-color {
+  color: $vivid-red-color
+}
+
+.has-luminous-vivid-orange-color {
+  color: $luminous-vivid-orange-color;
+}
+
+.has-luminous-vivid-amber-color {
+  color: $luminous-vivid-amber-color
+}
+
+.has-foreground-background-color {
+  background: $foreground-color;
+}
+
+.has-light-green-cyan-color {
+  color: $light-green-cyan-color
+}
+
+.has-vivid-green-cyan-color {
+  color: $vivid-green-cyan-color
+}
+
+.has-pale-cyan-blue-color {
+  color: $pale-cyan-blue-color
+}
+
+.has-vivid-cyan-blue-color {
+  color: $vivid-cyan-blue-color
+}
+
+.has-vivid-purple-color {
+  color: $vivid-purple-color
+}
+
+.has-cyan-bluish-gray-color {
+  color: $cyan-bluish-gray-color
+}
+
+.has-background-color {
+  background: $background-color
+}
+
+.has-primary-background-color {
+  background: $primary-color;
+}
+
+.has-secondary-background-color {
+  background: $secondary-color
+}
+
+.has-tertiary-background-color {
+  background: $tertiary-color;
+}
+
+.has-brand-background-color {
+  background: $brand-color;
+}

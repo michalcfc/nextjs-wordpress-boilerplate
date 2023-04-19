@@ -1,0 +1,794 @@
+{
+  "navItems": [
+    {
+      "id": 1,
+      "name": "Home",
+      "href": "/"
+    },
+    {
+      "id": 2,
+      "name": "About",
+      "href": "/about"
+    },
+    {
+      "id": 4,
+      "name": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "slides": [
+    {
+      "id": 1,
+      "name": "Trailer"
+    },
+    {
+      "id": 2,
+      "name": "Promo"
+    },
+    {
+      "id": 3,
+      "name": "Programs"
+    },
+    {
+      "id": 4,
+      "name": "Compilation"
+    },
+    {
+      "id": 5,
+      "name": "Advertisement"
+    },
+    {
+      "id": 6,
+      "name": "Presentations"
+    },
+    {
+      "id": 7,
+      "name": "Content video"
+    }
+  ],
+  "pricing": [
+    {
+      "id": 1,
+      "name": "Starter plan",
+      "desc": "Just for trying at the beginning",
+      "price": "Free",
+      "benefits": [
+        {
+          "id": 1,
+          "name": "3 project limit"
+        },
+        {
+          "id": 2,
+          "name": "Only one page in projects"
+        },
+        {
+          "id": 3,
+          "name": "Low resolution video exports"
+        },
+        {
+          "id": 4,
+          "name": "Free mockup items and content"
+        },
+        {
+          "id": 5,
+          "name": "Personal license, mostly for hobby usage"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Lite Plan",
+      "desc": "For the mockup enthusiasts",
+      "price": "$7",
+      "benefits": [
+        {
+          "id": 1,
+          "name": "Unlimited projects"
+        },
+        {
+          "id": 2,
+          "name": "Premium mockups and content"
+        },
+        {
+          "id": 3,
+          "name": "Premium templates"
+        },
+        {
+          "id": 4,
+          "name": "Commercial license"
+        },
+        {
+          "id": 5,
+          "name": "Project versions"
+        },
+        {
+          "id": 6,
+          "name": "Project presentation"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Professional Plan",
+      "desc": "For pro graphic and motion designers",
+      "price": "$12",
+      "benefits": [
+        {
+          "id": 1,
+          "name": "Unlimited projects"
+        },
+        {
+          "id": 2,
+          "name": "Premium mockups and content"
+        },
+        {
+          "id": 3,
+          "name": "Premium templates"
+        },
+        {
+          "id": 4,
+          "name": "Commercial license"
+        },
+        {
+          "id": 5,
+          "name": "Project versions"
+        },
+        {
+          "id": 6,
+          "name": "Project presentation"
+        },
+        {
+          "id": 7,
+          "name": "Commercial license"
+        },
+        {
+          "id": 8,
+          "name": "Branding components"
+        },
+        {
+          "id": 9,
+          "name": "Custom fonts"
+        },
+        {
+          "id": 10,
+          "name": "Team collaboration"
+        },
+        {
+          "id": 11,
+          "name": "Standard customer support"
+        },
+        {
+          "id": 12,
+          "name": "HD Video Export"
+        }
+      ]
+    }
+  ],
+  "numbers": [
+    {
+      "id": 1,
+      "nb": "8",
+      "name": "lat doświadczenia",
+      "desc": ""
+    },
+    {
+      "id": 2,
+      "nb": "114",
+      "name": "Zadowolonych klientów",
+      "desc": ""
+    },
+    {
+      "id": 3,
+      "nb": "375",
+      "name": "Projektów",
+      "desc": ""
+    },
+    {
+      "id": 4,
+      "nb": "21",
+      "name": "Partnerów",
+      "desc": ""
+    }
+  ],
+  "values": [
+    {
+      "id": 1,
+      "name": "Otwartość",
+      "desc": "You’ll have a branded job board as a centralized place to display all the open positions at your organization."
+    },
+    {
+      "id": 2,
+      "name": "Zespół profesjonalistów",
+      "desc": "As they apply, new candidates show up in the hiring dashboard for efficient review and management."
+    },
+    {
+      "id": 3,
+      "name": "Najlepsza jakość",
+      "desc": "Hiring is a team sport and Recruiten is set up to support it. With no limit on your user count, you can invite all the needed help."
+    },
+    {
+      "id": 4,
+      "name": "Najszybsza usługa",
+      "desc": "Hiring is a team sport and Recruiten is set up to support it. With no limit on your user count, you can invite all the needed help."
+    },
+    {
+      "id": 5,
+      "name": "Godni zaufania",
+      "desc": "You’ll have a branded job board as a centralized place to display all the open positions at your organization."
+    },
+    {
+      "id": 6,
+      "name": "Meritocracy",
+      "desc": "As they apply, new candidates show up in the hiring dashboard for efficient review and management."
+    }
+  ],
+  "about": [
+    {
+      "id": 1,
+      "number": 5,
+      "name": "Oprogramowanie",
+      "desc": "najnowsze oprogramowanie do montażu filmów, pozwalające na profesjonalną pracę."
+    },
+    {
+      "id": 2,
+      "number": 24,
+      "name": "Sprzęt",
+      "desc": "wysokiej jakości sprzęt do montażu filmów w najwyższej rozdzielczości."
+    },
+    {
+      "id": 3,
+      "number": 12,
+      "name": "Bezpieczeństwo danych",
+      "desc": "Dbamy o materiały klientów, zapewniamy poufność w ramach projektów filmowych."
+    },
+    {
+      "id": 4,
+      "number": 33,
+      "name": "Wsparcie techniczne",
+      "desc": "Świadczymy pomoc w przypadku problemów technicznych."
+    }
+  ],
+  "process": [
+    {
+      "id": 1,
+      "name": "Rozmowa",
+      "desc": "Proces rozpoczynamy od rozmowy, podczas której możemy dowiedzieć się prawdziwych smaczków o Tobie oraz Twojej firmie."
+    },
+    {
+      "id": 2,
+      "name": "Reaserch",
+      "desc": "Następnie przeprowadzamy dokładny research."
+    },
+    {
+      "id": 3,
+      "name": "Wizja",
+      "desc": "który pozwala nam na przygotowanie zindywidualizowanej wizji."
+    },
+    {
+      "id": 4,
+      "name": "Projekt",
+      "desc": "Gdy zostanie ona zaakceptowana, przechodzimy do etapu projektowania."
+    },
+    {
+      "id": 5,
+      "name": "Montaż",
+      "desc": "Rozpoczęcie montażu, który ponownie z Tobą skonsultujemy."
+    },
+    {
+      "id": 6,
+      "name": "Poprawki",
+      "img": "/img/process/step_four.webp",
+      "desc": "Aby mieć pewność, że owoc naszej współpracy spełnia Twoje oczekiwania, na ostatnim etapie wdrażamy niezbędne poprawki oraz dopracowujemy finalny projekt.."
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "name": "Cel projektu \uD83D\uDE0E",
+      "img": "/img/process/step_one.webp",
+      "desc": "Ustalenie wymagań i celów projektu wspólnie z klientem."
+    },
+    {
+      "id": 2,
+      "name": "Montaż filmu \uD83D\uDCF7",
+      "img": "/img/process/step_two.webp",
+      "desc": "Obróbka i edycja materiałów, łączenie ich w ostateczny kształt. Dodawanie efektów, animacji, muzyki."
+    },
+    {
+      "id": 3,
+      "name": "Wersja robocza \uD83D\uDCC1",
+      "img": "/img/process/step_three.webp",
+      "desc": "Prezentacja klientowi wersji roboczej filmu, w celu uzyskania opinii i feedbacku."
+    },
+    {
+      "id": 4,
+      "name": "Gotowe \uD83C\uDF89",
+      "img": "/img/process/step_four.webp",
+      "desc": "Wdrożenie poprawek i sugestii, przystąpienie do końcowego montażu i dostarczenie finalnego produktu."
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Project One",
+      "slug": "project-one",
+      "img": "/img/projects/project_one.webp",
+      "tags": [
+        "advertisement"
+      ],
+      "stack": [
+        {
+          "id": 1,
+          "name": "Adobe"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Promo"
+        }
+      ],
+      "client": "Noclegowo",
+      "description": "Primis cubilia est diam eros dignissim ante ac leitora vel mattis erat eu cum accumsan elit. Porttitor luctus sagittis sapien donec imperdiet neque non primis magnis erat facilisis ultricies curae blandit cum phasellus primis sociis. Enim in sodales esto neque sed class ligula facilisi libero. Habitant lacinia primis sodales interdum risus torquent cursus vehicula scelerisque magnis diam laoreet congue. Velit nibh potenti in non potenti fames auctor. Morbi velit faucibus vele elementum litora nulla morbi eros elementum sollicitudin ipsum. Fringilla est ultrices.\n\nneque sed class ligula facilisi libero. Habitant lacinia primis sodales interdum risus torquent cursus vehicula scelerisque magnis diamara laoreet congue. Velit nibh potenti in none potenti fames auctor. Morbi velit faucibus vele elementum litora nulla morbi eros elementum sollicitudin. Primis cubilia est diam eros dignissim ante ac leitora vel mattis erat eu cum accumsan elit. Porttitor luctus sagittis sapien donec imperdiet neque non primis magnis erat facilisis ultricies curae blandit cum phasellus primis sociis. Enim in sodales esto neque sed class ligula facilisi libero. Habitant lacinia primis sodales interdum risus torquent cursus vehicula scelerisque magnis diam laoreet congue. Velit nibh potenti in non potenti fames auctor. Morbi velit faucibus vele elementum litora nulla morbi eros elementum sollicitudin ipsum. Fringilla est ultrices.\n\nneque sed class ligula facilisi libero. Habitant lacinia primis sodales interdum risus torquent cursus vehicula scelerisque magnis diamara laoreet congue. Velit nibh potenti in none potenti fames auctor. Morbi velit faucibus vele elementum litora nulla morbi eros elementum sollicitudin. Primis cubilia est diam eros dignissim ante ac leitora vel mattis erat eu cum accumsan elit. Porttitor luctus sagittis sapien donec imperdiet neque non primis magnis erat facilisis ultricies curae blandit cum phasellus primis sociis. Enim in sodales esto neque sed class ligula facilisi libero. Habitant lacinia primis sodales interdum risus torquent cursus vehicula scelerisque magnis diam laoreet congue. Velit nibh potenti in non potenti fames auctor. Morbi velit faucibus vele elementum litora nulla morbi eros elementum sollicitudin ipsum. Fringilla est ultrices.\n\nneque sed class ligula facilisi libero. Habitant lacinia primis sodales interdum risus torquent cursus vehicula scelerisque magnis diamara laoreet congue. Velit nibh potenti in none potenti fames auctor. Morbi velit faucibus vele elementum litora nulla morbi eros elementum sollicitudin.",
+      "release": "12-10-2022"
+    },
+    {
+      "id": 2,
+      "name": "Project Two",
+      "slug": "project-two",
+      "img": "/img/projects/project_two.webp",
+      "tags": [
+        "advertisement"
+      ],
+      "stack": [
+        {
+          "id": 1,
+          "name": "Adobe"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Trailer"
+        }
+      ],
+      "client": "Noclegowo",
+      "description": "Projekt na zlecenie Noclegowo.pl",
+      "release": "12-10-2022"
+    },
+    {
+      "id": 3,
+      "name": "Project Three",
+      "slug": "project-three",
+      "img": "/img/projects/project_three.webp",
+      "tags": [
+        "advertisement"
+      ],
+      "stack": [
+        {
+          "id": 1,
+          "name": "Adobe"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Promo"
+        }
+      ],
+      "client": "Noclegowo",
+      "description": "Projekt na zlecenie Noclegowo.pl",
+      "release": "12-10-2022"
+    },
+    {
+      "id": 4,
+      "name": "Project Four",
+      "slug": "project-four",
+      "img": "/img/projects/project_four.webp",
+      "tags": [
+        "advertisement"
+      ],
+      "stack": [
+        {
+          "id": 1,
+          "name": "Adobe"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Promo"
+        }
+      ],
+      "client": "Noclegowo",
+      "description": "Projekt na zlecenie Noclegowo.pl",
+      "release": "12-10-2022"
+    },
+    {
+      "id": 5,
+      "name": "Project Five",
+      "slug": "project-five",
+      "img": "/img/projects/project_five.webp",
+      "tags": [
+        "advertisement"
+      ],
+      "stack": [
+        {
+          "id": 1,
+          "name": "Adobe"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Promo"
+        }
+      ],
+      "client": "Noclegowo",
+      "description": "Projekt na zlecenie Noclegowo.pl",
+      "release": "12-10-2022"
+    },
+    {
+      "id": 6,
+      "name": "Project Six",
+      "slug": "project-six",
+      "img": "/img/projects/project_six.webp",
+      "tags": [
+        "advertisement"
+      ],
+      "stack": [
+        {
+          "id": 1,
+          "name": "Adobe"
+        }
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "name": "Promo"
+        }
+      ],
+      "client": "Noclegowo",
+      "description": "Projekt na zlecenie Noclegowo.pl",
+      "release": "12-10-2022"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Programy",
+      "desc": "Opowiadamy historie, które znajdują swoje ujście w telewizji, na youtubie oraz popularnych platformach VOD.",
+      "img": "/img/services/service_one.png"
+    },
+    {
+      "id": 2,
+      "name": "Trailery i zapowiedzi",
+      "desc": "Trailery, które wywołają dreszczyk emocji, wzbudzając ciekawość u widza? Na tym znamy się bardzo dobrze!",
+      "img": "/img/services/service_two.png"
+    },
+    {
+      "id": 3,
+      "name": "Kompilacje",
+      "desc": "Krótkie, przykuwające wzrok wideo? Za pomocą dynamicznego montażu, wykorzystaniu efektów specjalnych tworzymy kompilacje najatrakcyjniejszych ujęć.",
+      "img": "/img/services/service_three.png"
+    },
+    {
+      "id": 4,
+      "name": "Content video",
+      "desc": "Chcesz zwiększyć zasięg swojej marki lub firmy w mediach społecznościowych? Pomożemy Ci zmontować filmy na miarę panujących w sieci trendów!",
+      "img": "/img/services/service_four.png"
+    },
+    {
+      "id": 5,
+      "name": "Prezentacje i szablony",
+      "desc": "Jak zasiać ciekawość u potencjalnego klienta? Naszą tajną bronią jest Adobe After Effects pozwalający na przygotowanie prezentacji w postaci krótkiego, nieszablonowego filmu!",
+      "img": "/img/services/service_five.png"
+    },
+    {
+      "id": 6,
+      "name": "Reklamy",
+      "desc": "Nie obcy jest nam również montaż reklam emitowanych w telewizji, internecie, platformach VOD mających na celu promocję produktów lub usług.",
+      "img": "/img/services/service_six.png"
+    },
+    {
+      "id": 7,
+      "name": "Wywiady",
+      "desc": "Przepisem Jachimov na atrakcyjny montaż wywiadów jest uwzględnienie wizualnych uatrakcyjnień: animowanych elementów wizualnych, różnych przebitek, odpowiedniego kadrowania.",
+      "img": "/img/services/service_seven.png"
+    },
+    {
+      "id": 8,
+      "name": "Filmy na youtube",
+      "desc": "Prowadzisz autorski kanał na YouTube, jednak montaż nie jest Twoją mocną stroną? Powierz go naszemu zespołowi i obserwuj, jak oglądalność sukcesywnie rośnie!",
+      "img": "/img/services/service_eight.png"
+    },
+    {
+      "id": 9,
+      "name": "E-learningi",
+      "desc": "Przygotujemy dla Ciebie zwięzłe filmy, idealne jako uzupełnienie szkolenia skierowane do pracowników firmy oraz współpracujących z Tobą marek.",
+      "img": "/img/services/service_nine.png"
+    },
+    {
+      "id": 10,
+      "name": "Videocasty",
+      "desc": "Videocasty to nowy sposób na poszerzenie grupy odbiorców, a kluczem do ich osiągnięcia jest odpowiednio zsynchronizowany montaż materiałów wideo z nagraniami wideo. Daj na chwilę, a stworzymy podcast na miarę profesjonalnego twórcy.",
+      "img": "/img/services/service_ten.png"
+    },
+    {
+      "id": 11,
+      "name": "Teledyski",
+      "desc": "Wpadająca w ucho muzyka to dopiero połowa sukcesu. Razem z zespołem Jachimov stworzysz teledysk, niczym z amerykańskiego snu z dbałością o spójność między obrazem a dźwiękiem.",
+      "img": "/img/services/service_eleven.png"
+    },
+    {
+      "id": 12,
+      "name": "Reportaże",
+      "desc": "Jako montażyści nie boimy się podejmowania tematów trudnych i ważnych. Chętnie podejmujemy się montażu reportaży, starając się jak najlepiej odzwierciedlić biorące w nich osoby oraz ich doświadczenia.",
+      "img": "/img/services/service_twelve.png"
+    },
+    {
+      "id": 13,
+      "name": "Color grading",
+      "desc": "W celu uatrakcyjnienia materiałów video poprawiamy ich kolory, nadając im intensywności, poprawiamy światło, równocześnie wyrównując cienie.",
+      "img": "/img/services/service_twelve.png"
+    },
+    {
+      "id": 14,
+      "name": "Relacje",
+      "desc": "W jaki sposób podsumować branżowe wydarzenie? Najlepiej efektownie za pomocą krótkie filmu, pełniącego role zwięzłej relacji z eventu.",
+      "img": "/img/services/service_twelve.png"
+    },
+    {
+      "id": 15,
+      "name": "Filmowe pamiątki\n",
+      "desc": "W celu zachowania bezcennych chwil, które minęły bezpowrotnie z wykorzystaniem Twoich materiałów, przygotujemy krótki trailer upamiętniające ważne wydarzenie!",
+      "img": "/img/services/service_twelve.png"
+    }
+  ],
+  "features": [
+    {
+      "id": 1,
+      "name": "Completely Customizable",
+      "desc": "Cras aliquam fringilla sollicitudin quis potenti lacinia volutpat nisl amet."
+    },
+    {
+      "id": 2,
+      "name": "Use Standard Menus",
+      "desc": "Cras aliquam fringilla sollicitudin quis potenti lacinia volutpat nisl amet."
+    },
+    {
+      "id": 3,
+      "name": "Use Divi Library Content",
+      "desc": "Cras aliquam fringilla sollicitudin quis potenti lacinia volutpat nisl amet."
+    },
+    {
+      "id": 4,
+      "name": "Vertical & Horizontal Layout",
+      "desc": "Cras aliquam fringilla sollicitudin quis potenti lacinia volutpat nisl amet."
+    },
+    {
+      "id": 5,
+      "name": "Hover & Click Triggers",
+      "desc": "Cras aliquam fringilla sollicitudin quis potenti lacinia volutpat nisl amet."
+    },
+    {
+      "id": 6,
+      "name": "Stunning Animations",
+      "desc": "Cras aliquam fringilla sollicitudin quis potenti lacinia volutpat nisl amet."
+    },
+    {
+      "id": 7,
+      "name": "Add Badges to Menu Items",
+      "desc": "Cras aliquam fringilla sollicitudin quis potenti lacinia volutpat nisl amet."
+    },
+    {
+      "id": 8,
+      "name": "Custom Image",
+      "desc": "Cras aliquam fringilla sollicitudin quis potenti lacinia volutpat nisl amet."
+    }
+  ],
+  "examples": [
+    {
+      "id": 1,
+      "img": "/img/examples/example_one.jpeg",
+      "title": "Programy",
+      "desc": "Playlist · 24 videos"
+    },
+    {
+      "id": 2,
+      "img": "/img/examples/example_two.jpg",
+      "title": "Trailery i zapowiedzi",
+      "desc": "Playlist · 8 videos"
+    },
+    {
+      "id": 3,
+      "img": "/img/examples/example_three.jpg",
+      "title": "Kompilacje",
+      "desc": "Playlist · 20 videos"
+    },
+    {
+      "id": 4,
+      "img": "/img/examples/example_four.jpeg",
+      "title": "Content video",
+      "desc": "Playlist · 8 videos"
+    },
+    {
+      "id": 5,
+      "img": "/img/examples/example_five.jpg",
+      "title": "Prezentacje i szablony",
+      "desc": "Playlist · 10 videos"
+    },
+    {
+      "id": 6,
+      "img": "/img/examples/example_two.jpg",
+      "title": "Reklamy",
+      "desc": "Playlist · 10 videos"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "title": "Polecam!",
+      "name": "Mateusz Goliat",
+      "company": "Noclegowo.pl",
+      "img": "https://jachimov.pl/wp-content/uploads/2022/07/mateusz-goliat-e1658209358402-150x150.jpeg",
+      "text": "Polecam zarówno produkcję filmów biznesowych, reklamowych jak i wspomnień z wakacji.."
+    },
+    {
+      "id": 2,
+      "title": "Polecam!",
+      "name": "Mateusz Goliat",
+      "company": "Noclegowo.pl",
+      "img": "https://jachimov.pl/wp-content/uploads/2022/07/mateusz-goliat-e1658209358402-150x150.jpeg",
+      "text": "Polecam zarówno produkcję filmów biznesowych, reklamowych jak i wspomnień z wakacji.."
+    },
+    {
+      "id": 3,
+      "title": "Polecam!",
+      "name": "Mateusz Goliat",
+      "company": "Noclegowo.pl",
+      "img": "https://jachimov.pl/wp-content/uploads/2022/07/mateusz-goliat-e1658209358402-150x150.jpeg",
+      "text": "Polecam zarówno produkcję filmów biznesowych, reklamowych jak i wspomnień z wakacji.."
+    },
+    {
+      "id": 4,
+      "title": "Polecam!",
+      "name": "Mateusz Goliat",
+      "company": "Noclegowo.pl",
+      "img": "https://jachimov.pl/wp-content/uploads/2022/07/mateusz-goliat-e1658209358402-150x150.jpeg",
+      "text": "Polecam zarówno produkcję filmów biznesowych, reklamowych jak i wspomnień z wakacji.."
+    },
+    {
+      "id": 5,
+      "title": "Polecam!",
+      "name": "Mateusz Goliat",
+      "company": "Noclegowo.pl",
+      "img": "https://jachimov.pl/wp-content/uploads/2022/07/mateusz-goliat-e1658209358402-150x150.jpeg",
+      "text": "Polecam zarówno produkcję filmów biznesowych, reklamowych jak i wspomnień z wakacji.."
+    },
+    {
+      "id": 6,
+      "title": "Polecam!",
+      "name": "Mateusz Goliat",
+      "company": "Noclegowo.pl",
+      "img": "https://jachimov.pl/wp-content/uploads/2022/07/mateusz-goliat-e1658209358402-150x150.jpeg",
+      "text": "Polecam zarówno produkcję filmów biznesowych, reklamowych jak i wspomnień z wakacji.."
+    }
+  ],
+  "partners": [
+    {
+      "id": 1,
+      "img": "/img/partners/amazon-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 2,
+      "img": "/img/partners/kaplan-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 3,
+      "img": "/img/partners/google-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 4,
+      "img": "/img/partners/airbnb-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 5,
+      "img": "/img/partners/shopify-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 6,
+      "img": "/img/partners/vidados-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 7,
+      "img": "/img/partners/capsule-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 8,
+      "img": "/img/partners/forbes-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 9,
+      "img": "/img/partners/business-insider-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 10,
+      "img": "/img/partners/hubspot-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 11,
+      "img": "/img/partners/sass-dark.svg",
+      "name": "Pixelied"
+    },
+    {
+      "id": 12,
+      "img": "/img/partners/forbes-dark.svg",
+      "name": "Pixelied"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "name": "Jakie usługi oferujecie?",
+      "desc": "Oferujemy profesjonalny montaż filmów, w tym programów, filmów reklamowych, trailerów, kompilacji czy prezentacji."
+    },
+    {
+      "id": 2,
+      "name": "Jak długo trwa proces montażu filmu?",
+      "desc": "Zwykle  trwa to od kilku dni do kilku tygodni."
+    },
+    {
+      "id": 3,
+      "name": "Jakie są koszty montażu filmu?",
+      "desc": "Koszt montażu filmu zależy od wielu czynników, takich jak długość materiału, złożoność montażu, wykorzystanie efektów specjalnych i innych. Dokładna wycena zostanie ustalona po omówieniu szczegółów projektu.\n"
+    },
+    {
+      "id": 4,
+      "name": "Czy mogę wybrać muzykę do mojego filmu?",
+      "desc": "Tak, zawsze zachęcamy naszych klientów do wybrania muzyki, która najlepiej pasuje do ich projektu. Możemy również pomóc w wyborze odpowiedniego utworu."
+    },
+    {
+      "id": 5,
+      "name": "Czy mogę poprosić o zmiany w montażu filmu?",
+      "desc": "Oczywiście, jesteśmy otwarci na sugestie i zmiany, które chcesz wprowadzić do swojego projektu. Pracujemy nad projektem do momentu, gdy będziesz w pełni zadowolony z efektu końcowego."
+    }
+  ],
+  "questionsAbout": [
+    {
+      "id": 1,
+      "name": "Rozmowa",
+      "desc": "Podczas wstępnych rozmów chętnie poznajemy pomysły projektowe klienta."
+    },
+    {
+      "id": 2,
+      "name": "Partnerstwo",
+      "desc": "Staramy się zbudować relację partnerską."
+    },
+    {
+      "id": 3,
+      "name": "Profesjonalizm",
+      "desc": "Na każdym etapie produkcji zachowujemy niezachwiany profesjonalizm."
+    },
+    {
+      "id": 4,
+      "name": "Obsługa klienta",
+      "desc": "Pozostajemy w kontakcie z klientem, aby zarówno tworzenie koncepcji, jak i dopracowywanie finalnego projektu przebiegało zgodnie z jego oczekiwaniami."
+    },
+    {
+      "id": 5,
+      "name": "Doświadczenie i opinie",
+      "desc": "Potwierdzeniem naszego zaangażowania w projekty jest doświadczenie oraz opinie, które zebraliśmy na przestrzeni lat od mniejszych i większych klientów."
+    }
+  ]
+}
