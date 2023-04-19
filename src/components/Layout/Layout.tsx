@@ -1,51 +1,79 @@
-import Script from 'next/script';
+import { useRouter } from 'next/router';
+import { DefaultSeo } from 'next-seo';
 
 // components
 import { Grid } from '@chakra-ui/react';
+import Head from 'next/head';
+import { Meta } from './components/Meta';
 import { Main } from './components/Main';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { GoogleAnalytics } from '@/components/common/GoogleAnalytics';
 
 // types
 import { LayoutD } from './Layout.d';
+import { PageSeoD } from '@/lib/types';
 
-const Layout = ({ children }: LayoutD) => (
-  <>
-    <header>
-      {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-        >
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+// hooks
+import useSite from '@/hooks/useSiteContext';
 
-            gtag('config', '${process.env.GOOGLE_TAG_MANAGER_ID}');
-          `}
-        </Script>
-      )}
-      {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}`}
-          strategy="afterInteractive"
+const Layout = ({ children }: LayoutD) => {
+  const router = useRouter();
+  const { asPath } = router;
+
+  const { homepage, metadata = {} } = useSite();
+
+  if (!metadata) {
+    (metadata as PageSeoD).og = {
+      author: '',
+      description: '',
+      image: '',
+      modifiedTime: '',
+      publishedTime: '',
+      publisher: '',
+      title: '',
+      type: '',
+      url: '',
+    };
+  }
+
+  (metadata as PageSeoD).og.url = `${homepage}${asPath}`;
+
+  return (
+    <>
+      <Head>
+        <Meta />
+        <GoogleAnalytics />
+        <DefaultSeo
+          title={`${(metadata as PageSeoD)?.metaTitle}`}
+          description="Jachimov"
+          openGraph={{
+            type: 'website',
+            locale: 'en_IE',
+            url: 'https://www.jachimov.pl/',
+            site_name: 'Jachimov',
+          }}
+          twitter={{
+            handle: '@handle',
+            site: '@site',
+            cardType: 'summary_large_image',
+          }}
         />
-      )}
-    </header>
-    <Grid
-      minHeight="100vh"
-      templateAreas={`
-              "header header"
-              "main main"
-              "footer footer"`}
-      gridTemplateRows="auto 1fr auto"
-    >
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
-    </Grid>
-  </>
-);
+      </Head>
+      <Grid
+        minHeight="100vh"
+        templateAreas={`
+                  "header header"
+                  "main main"
+                  "footer footer"`}
+        gridTemplateRows="auto 1fr auto"
+      >
+        <Header />
+        <Main>{children}</Main>
+        <Footer />
+      </Grid>
+    </>
+  );
+};
 
 export default Layout;

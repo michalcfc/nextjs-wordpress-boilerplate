@@ -35,12 +35,12 @@ export const PAGE_FIELDS = gql`
 `;
 
 export const QUERY_ALL_PAGES = gql`
-    ${PAGE_FIELDS}
+  ${PAGE_FIELDS}
   query AllPagesIndex {
     pages {
       edges {
         node {
-           ...PageFields
+          ...PageFields
           content
           featuredImage {
             node {

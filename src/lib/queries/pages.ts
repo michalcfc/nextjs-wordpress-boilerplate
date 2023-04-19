@@ -1,9 +1,9 @@
-import {gql} from '@apollo/client'
+import { gql } from '@apollo/client';
 import {
   MENU_FRAGMENT,
   GENERAL_FRAGMENT,
   FEATURED_IMAGE_FRAGMENT,
-} from "@/lib/queries/fragments";
+} from '@/lib/queries/fragments';
 
 export const SINGLE_PAGE_QUERY = gql`
   ${MENU_FRAGMENT}
@@ -34,4 +34,4 @@ export const SINGLE_PAGE_QUERY = gql`
       }
     }
   }
-`
+`;

@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const GENERAL_FRAGMENT = gql`
   fragment Settings on GeneralSettings {
@@ -8,4 +8,4 @@ export const GENERAL_FRAGMENT = gql`
     timeFormat
     title
   }
-`
+`;

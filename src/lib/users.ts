@@ -1,7 +1,7 @@
 /**
  * updateUserAvatar
  */
-import { Avatar } from "@/generated/graphql";
+import { Avatar } from '@/generated/graphql';
 
 export function updateUserAvatar(avatar: Avatar) {
   // The URL by default that comes from Gravatar / WordPress is not a secure

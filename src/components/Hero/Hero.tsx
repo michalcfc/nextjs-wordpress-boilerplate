@@ -32,6 +32,16 @@ const Hero: React.FC<HeroD> = ({
         position="relative"
         p={{ base: '120px 0 0 0', lg: '160px 0 0 0' }}
         borderRadius="0px 0px 3rem 3rem"
+        _after={{
+          top: 0,
+          content: '"0"',
+          height: '100%',
+          width: '100%',
+          opacity: 0.2,
+          position: 'absolute',
+          borderRadius: '0 0 99px 99px',
+          bg: 'radial-gradient(at center center, #c8ff62 0%, #053F48 76%)',
+        }}
       >
         <Container
           maxW="8xl"

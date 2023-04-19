@@ -32,11 +32,6 @@ const ContactForm: React.FC<ContactFormD> = () => {
   const [formErrors, setFormErrors] = useState<FormValues>(initialValues);
   const [isSubmit, setIsSubmit] = useState<boolean>(false);
 
-  const subjects = [
-    { id: 1, value: 'job offer', label: 'job offer' },
-    { id: 2, value: 'collaboration', label: 'collaboration' },
-  ];
-
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formErrors);

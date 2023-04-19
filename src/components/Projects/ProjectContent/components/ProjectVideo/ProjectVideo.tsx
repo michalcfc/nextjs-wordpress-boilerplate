@@ -7,7 +7,7 @@ import {
 // types
 import { ProjectVideoD } from './ProjectVideo.d';
 
-const ProjectVideo = ({ title, videoUri, client }: ProjectVideoD) => (
+const ProjectVideo = ({ videoUri }: ProjectVideoD) => (
   <Box
     pb={14}
     pt={32}

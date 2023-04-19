@@ -44,9 +44,9 @@ const allPagesIncludesTypes = {
 
 export interface QueryIncludeProps {
   queryIncludes:
-    | 'all'
-    | 'index'
-    | 'archive'
+  | 'all'
+  | 'index'
+  | 'archive'
 }
 
 export async function getAllPages(options = {}) {

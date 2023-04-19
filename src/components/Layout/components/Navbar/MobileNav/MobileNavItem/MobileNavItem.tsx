@@ -12,17 +12,18 @@ import { FaChevronDown } from 'react-icons/fa';
 
 // types
 import { MobileNavItemD } from './MobileNavItem.d';
+import { capitalizeFirstLetter } from '@/utils/capitalizeFirstLetter';
 
-const MobileNavItem = ({ name, href, children }: MobileNavItemD) => {
+const MobileNavItem = ({ label, path, childItems }: MobileNavItemD) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Stack
-      onClick={children && onToggle}
+      onClick={childItems && onToggle}
     >
       <Flex
         as={Link}
-        href={href ?? '#'}
+        href={path ?? '#'}
         align="center"
         px={3}
         justify="space-between"
@@ -37,9 +38,9 @@ const MobileNavItem = ({ name, href, children }: MobileNavItemD) => {
           fontWeight={600}
           color="black"
         >
-          {name}
+          {capitalizeFirstLetter(label)}
         </Text>
-        {children && (
+        {childItems?.length !== 0 && (
         <Icon
           as={FaChevronDown}
           color="black"
@@ -61,14 +62,14 @@ const MobileNavItem = ({ name, href, children }: MobileNavItemD) => {
           borderColor={useColorModeValue('gray.200', 'gray.700')}
           align="start"
         >
-          {children?.map(({ name, href }) => (
+          {childItems?.map(({ path, label }) => (
             <Link
-              key={name}
               py={3}
-              href={href}
+              key={label}
               color="black"
+              href={path ?? ''}
             >
-              {name}
+              {capitalizeFirstLetter(label ?? '')}
             </Link>
           ))}
         </Stack>

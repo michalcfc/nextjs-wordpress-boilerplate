@@ -1,8 +1,8 @@
-import { Link } from '../../Navbar.d';
+import { MenuItem } from '@/generated/graphql';
 
 export interface MobileNavItemD {
-  name: string;
-  href: string;
+  label: string;
+  path: string;
   desc?: string;
-  children?: Link[];
+  childItems: MenuItem[];
 }

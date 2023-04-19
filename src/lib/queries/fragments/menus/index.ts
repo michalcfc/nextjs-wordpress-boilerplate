@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const MENU_FRAGMENT = gql`
   fragment MenuItems on Menu {
@@ -16,4 +16,4 @@ export const MENU_FRAGMENT = gql`
             }
           }
   }
-`
+`;

@@ -1,8 +1,8 @@
+import Link from 'next/link';
 import {
   Box,
   Flex,
   Icon,
-  Link,
   Popover,
   PopoverContent,
   PopoverTrigger,
@@ -15,8 +15,11 @@ import { DesktopSubNavItem } from '../DesktopSubNavItem';
 // types
 import { DesktopNavItemD } from './DesktopNavItem.d';
 
+// helpers
+import { capitalizeFirstLetter } from '@/utils/capitalizeFirstLetter';
+
 const DesktopNavItem = ({
-  href, name, isScrolled, children,
+  label, path, isScrolled, childItems,
 }: DesktopNavItemD) => {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -33,7 +36,7 @@ const DesktopNavItem = ({
             px={3}
             align="center"
             fontWeight="500"
-            href={href ?? '#'}
+            href={path ?? '#'}
             borderRadius="xl"
             onMouseEnter={onToggle}
             onMouseLeave={onToggle}
@@ -49,8 +52,8 @@ const DesktopNavItem = ({
               color: isScrolled ? 'black' : 'brand',
             }}
           >
-            {name}
-            {children && (
+            {capitalizeFirstLetter(label ?? '')}
+            {childItems?.length !== 0 && (
             <Icon
               h={3}
               w={3}
@@ -63,7 +66,7 @@ const DesktopNavItem = ({
           </Flex>
         </PopoverTrigger>
 
-        {children && (
+        {childItems?.length !== 0 && (
         <PopoverContent
           p={4}
           minW="sm"
@@ -73,8 +76,9 @@ const DesktopNavItem = ({
           boxShadow="xl"
         >
           <Stack>
-            {children.map((child) => (
-              <DesktopSubNavItem key={name} {...child} />
+            {childItems?.map((childItem, id) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <DesktopSubNavItem key={id} {...childItem} />
             ))}
           </Stack>
         </PopoverContent>

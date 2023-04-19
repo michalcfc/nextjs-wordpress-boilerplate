@@ -1,6 +1,6 @@
-import { Link } from '../Navbar.d';
+import { MenuItem } from '@/generated/graphql';
 
 export interface DesktopNavD {
-  items: Link[];
+  items: MenuItem[];
   isScrolled: boolean
 }

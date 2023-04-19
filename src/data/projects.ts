@@ -7,44 +7,44 @@ export const PROJECT_FIELDS = gql`
     title
     content
     seo {
-        title
-        metaDesc
-        fullHead
+      title
+      metaDesc
+      fullHead
     }
-     projectFeatures {
-        client
-        type
-        embed
-      }
+    projectFeatures {
+      client
+      type
+      embed
+    }
     categories {
-        edges {
-          node {
-            databaseId
-            id
-            name
-            slug
-          }
+      edges {
+        node {
+          databaseId
+          id
+          name
+          slug
         }
       }
+    }
   }
 `;
 
 export const QUERY_SINGLE_PROJECT = gql`
-    ${PROJECT_FIELDS}
-    query SingleProject($slug: ID!) {
-        project(id: $slug, idType: SLUG) {
-            ...ProjectFields
-        }
+  ${PROJECT_FIELDS}
+  query SingleProject($slug: ID!) {
+    project(id: $slug, idType: SLUG) {
+      ...ProjectFields
     }
+  }
 `;
 
 export const QUERY_ALL_PROJECTS = gql`
-    ${PROJECT_FIELDS}
-   query AllProjects {
+  ${PROJECT_FIELDS}
+  query AllProjects {
     projects {
       edges {
         node {
-         ...ProjectFields
+          ...ProjectFields
           featuredImage {
             node {
               id
@@ -57,6 +57,6 @@ export const QUERY_ALL_PROJECTS = gql`
           }
         }
       }
-      }
     }
+  }
 `;

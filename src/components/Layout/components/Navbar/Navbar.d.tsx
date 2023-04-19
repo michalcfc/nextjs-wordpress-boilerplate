@@ -1,8 +1,7 @@
 export type Link = {
   id?: number;
-  name: string;
-  href: string;
+  label: string;
+  path: string;
   desc?: string;
-
   children?: Link[];
 };

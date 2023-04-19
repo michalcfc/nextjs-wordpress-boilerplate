@@ -18,7 +18,8 @@ const documents = [] as DocumentNode[];
 export function graphql(source: number): unknown;
 
 export function graphql(source: number) {
-  return (documents)[source] ?? {};
+  return documents[source] ?? {};
 }
 
-export type DocumentType<TDocumentNode extends DocumentNode<any, any>> = TDocumentNode extends DocumentNode<  infer TType,  any>  ? TType  : never;
+export type DocumentType<TDocumentNode extends DocumentNode<any, any>> =
+  TDocumentNode extends DocumentNode<infer TType, any> ? TType : never;

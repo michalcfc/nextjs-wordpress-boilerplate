@@ -9,15 +9,16 @@ const DesktopNav = ({ items, isScrolled }: DesktopNavD) => (
     role="group"
     direction="row"
   >
-    {items.map(({ href, name, children }) => (
+    {items?.map(({
+      id, path, label, childItems,
+    }) => (
       <DesktopNavItem
-        key={name}
-        href={href}
-        name={name}
+        key={id}
+        path={path ?? ''}
+        label={label ?? ''}
+        childItems={Array.isArray(childItems) ? childItems : []}
         isScrolled={isScrolled}
-      >
-        {children}
-      </DesktopNavItem>
+      />
     ))}
   </Stack>
 );

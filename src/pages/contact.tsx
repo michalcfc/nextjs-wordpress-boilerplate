@@ -1,15 +1,9 @@
 // components
-import {
-  GridItem,
-  SimpleGrid,
-} from '@chakra-ui/react';
-import {
-  PageWrapper,
-  PageContent,
-} from '@/components/common/Page';
+import { GridItem, SimpleGrid } from '@chakra-ui/react';
+import { PageWrapper, PageContent } from '@/components/common/Page';
 import { ContactForm } from '@/components/ContactForm';
 import { ContactDetails } from '@/components/ContactDetails';
-import { getPageByUri } from "@/lib/pages";
+import { getPageByUri } from '@/lib/pages';
 
 const Contact = () => (
   <PageWrapper
@@ -32,10 +26,7 @@ const Contact = () => (
     }}
   >
     <PageContent>
-      <SimpleGrid
-        spacing={14}
-        columns={{ base: 1, lg: 2 }}
-      >
+      <SimpleGrid spacing={14} columns={{ base: 1, lg: 2 }}>
         <GridItem order={{ base: 2, lg: 1 }}>
           <ContactDetails />
         </GridItem>

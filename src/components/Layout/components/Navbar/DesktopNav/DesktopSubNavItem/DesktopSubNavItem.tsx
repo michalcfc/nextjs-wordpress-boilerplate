@@ -1,15 +1,21 @@
 import {
-  Box, Flex, Link, Stack, Text, useColorModeValue,
+  Box,
+  Flex,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { FaChevronRight } from 'react-icons/fa';
 
 // types
 import { DesktopSubNavItemD } from './DesktopSubNavItem.d';
+import { capitalizeFirstLetter } from '@/utils/capitalizeFirstLetter';
 
-const DesktopSubNavItem = ({ href, name, desc }: DesktopSubNavItemD) => (
+const DesktopSubNavItem = ({ label, path, desc }: DesktopSubNavItemD) => (
   <Link
     p={2}
-    href={href}
+    href={path ?? ''}
     rounded="md"
     role="group"
     display="block"
@@ -18,12 +24,22 @@ const DesktopSubNavItem = ({ href, name, desc }: DesktopSubNavItemD) => (
       textDecoration: 'none',
     }}
   >
-    <Stack direction="row" align="center">
+    <Stack
+      direction="row"
+      align="center"
+    >
       <Box>
-        <Text transition="all .3s ease" fontWeight={600} color="black">
-          {name}
+        <Text
+          transition="all .3s ease"
+          fontWeight={600}
+          color="black"
+        >
+          {capitalizeFirstLetter(label ?? '')}
         </Text>
-        <Text fontSize="sm" color="muted">
+        <Text
+          fontSize="sm"
+          color="muted"
+        >
           {desc}
         </Text>
       </Box>

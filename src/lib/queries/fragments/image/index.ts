@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const FEATURED_IMAGE_FRAGMENT = gql`
   fragment FeaturedImageFields on NodeWithFeaturedImageToMediaItemConnectionEdge {
@@ -11,4 +11,4 @@ export const FEATURED_IMAGE_FRAGMENT = gql`
       }
     }
   }
-`
+`;

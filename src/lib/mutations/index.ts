@@ -1,5 +1,5 @@
-import { CREATE_COMMENT } from "./posts"
+import { CREATE_COMMENT } from './posts';
 
 export {
-  CREATE_COMMENT
-}
+  CREATE_COMMENT,
+};

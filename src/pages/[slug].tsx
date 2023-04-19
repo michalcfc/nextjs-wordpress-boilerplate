@@ -1,35 +1,19 @@
 import React from 'react';
-import {
-  GetStaticPaths,
-  GetStaticProps,
-} from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 import { PageWrapper } from '@/components/common/Page';
-import {
-  Page,
-  SeoBreadcrumbs,
-} from '@/generated/graphql';
+import { Page, SeoBreadcrumbs } from '@/generated/graphql';
 
-import {
-  getAllPages,
-  getBreadcrumbsByUri,
-  getPageByUri,
-} from '@/lib/pages';
+import { getAllPages, getBreadcrumbsByUri, getPageByUri } from '@/lib/pages';
 import { PageSeoD } from '@/lib/types';
 
 type AboutPageD = {
-  page: Page & PageSeoD
-  breadcrumbs: SeoBreadcrumbs
+  page: Page & PageSeoD;
+  breadcrumbs: SeoBreadcrumbs;
 };
 
 const SlugPage = ({ page, breadcrumbs }: AboutPageD) => {
-  const {
-    og,
-    title,
-    metaTitle,
-    metaDescription,
-    content,
-  } = page;
+  const { og, title, metaTitle, metaDescription, content } = page;
 
   console.log(breadcrumbs);
 

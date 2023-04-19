@@ -1,8 +1,7 @@
-import { Link } from '../Navbar.d';
+import { MenuItem } from '@/generated/graphql';
 
 export interface MobileNavD {
   isOpen: boolean;
-  items: Link[];
-
+  items: MenuItem[];
   ref: HTMLDivElement
 }

@@ -3,10 +3,10 @@ import { useContext, createContext } from 'react';
 import config from '../../package.json';
 
 import { removeLastTrailingSlash } from '@/lib/utils';
-import { Menu } from "@/generated/graphql";
+import { Menu } from '@/generated/graphql';
 
 export type SiteContextInterface = {
-  menus: Menu
+  menus: Menu;
 };
 
 export const SiteContext = createContext<SiteContextInterface>(null!);

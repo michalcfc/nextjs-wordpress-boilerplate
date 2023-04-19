@@ -10,7 +10,7 @@ const SendFilesBtn = ({ isSolid, ...rest }: SendFilesBtnD) => (
     as="a"
     size="lg"
     fontSize="md"
-    href="/upload"
+    href="/wyslij-pliki"
     borderRadius="full"
     border={`${isSolid ? '0' : '2px solid white'}`}
     variant={`${isSolid ? 'brandPrimary' : 'outline'}`}

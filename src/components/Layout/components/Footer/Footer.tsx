@@ -59,7 +59,7 @@ const Footer = () => (
             <Link
               color="lightWhite"
               _hover={{ textDecoration: 'none', color: 'white' }}
-              href="/about"
+              href="/about-us"
             >
               O nas
             </Link>
@@ -73,14 +73,14 @@ const Footer = () => (
             <Link
               color="lightWhite"
               _hover={{ textDecoration: 'none', color: 'white' }}
-              href="/upload"
+              href="/wyslij-pliki"
             >
               Upload
             </Link>
             <Link
               color="lightWhite"
               _hover={{ textDecoration: 'none', color: 'white' }}
-              href="/contact"
+              href="/kontakt"
             >
               Kontakt
             </Link>
@@ -92,21 +92,21 @@ const Footer = () => (
           >
             <ListHeader>Lokalnie</ListHeader>
             <Link
-              href="/about"
+              href="/o-nas"
               color="lightWhite"
               _hover={{ textDecoration: 'none', color: 'white' }}
             >
               O nas
             </Link>
             <Link
-              href="/offer"
+              href="/oferta"
               color="lightWhite"
               _hover={{ textDecoration: 'none', color: 'white' }}
             >
               Oferta
             </Link>
             <Link
-              href="/projects"
+              href="/realizacje"
               color="lightWhite"
               _hover={{ textDecoration: 'none', color: 'white' }}
             >
@@ -120,7 +120,7 @@ const Footer = () => (
           >
             <ListHeader>Kontakt</ListHeader>
             <Link
-              href="/contact"
+              href="/kontakt"
               color="lightWhite"
               _hover={{ textDecoration: 'none', color: 'white' }}
             >

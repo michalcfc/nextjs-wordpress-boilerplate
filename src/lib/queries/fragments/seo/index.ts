@@ -24,4 +24,4 @@ fragment SeoFragment on PostTypeSEO {
         sourceUrl
       }
 }
- `
+ `;

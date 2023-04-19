@@ -1,4 +1,4 @@
-import NextApp, { AppContext } from "next/app";
+import NextApp, { AppContext } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import '../styles/index.scss';
 
@@ -19,14 +19,11 @@ import { Layouts } from '@/components/common/Layouts';
 import { MyAppProps } from '@/components/common/Layouts/Layout.d';
 
 // lib
-import { getAllMenus } from "@/lib/menus";
+import { getAllMenus } from '@/lib/menus';
 
 // hooks
-import {
-  SiteContext,
-  useSiteContext
-} from "@/hooks/useSiteContext";
-import { Meta } from "@/components/Layout/components/Meta";
+import { SiteContext, useSiteContext } from '@/hooks/useSiteContext';
+import { Meta } from '@/components/Layout/components/Meta';
 
 const MyApp = ({ Component, pageProps, menus }: MyAppProps) => {
   const Layout = Layouts[Component.Layout] ?? ((page) => page);
@@ -35,7 +32,7 @@ const MyApp = ({ Component, pageProps, menus }: MyAppProps) => {
     menus,
   });
 
-  console.log(site)
+  console.log(site);
 
   return (
     <>

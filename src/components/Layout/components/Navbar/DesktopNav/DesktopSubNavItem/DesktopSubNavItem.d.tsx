@@ -1,5 +1,9 @@
+import { MenuItem } from '@/generated/graphql';
+
 export interface DesktopSubNavItemD {
-  href: string;
-  name: string;
-  desc?: string;
+  id?: string
+  label?: string | null
+  path?: string | null
+  desc?: string | undefined
+  children?: MenuItem[] | undefined
 }

@@ -7,6 +7,7 @@ import {
 import React from 'react';
 import { MobileNavItem } from './MobileNavItem';
 
+// utils
 // types
 import { MobileNavD } from './MobileNav.d';
 import { SendFilesBtn } from '@/components/common/SendFilesBtn';
@@ -24,15 +25,14 @@ const MobileNav = React.forwardRef<HTMLDivElement, MobileNavD>((props, ref) => (
       bg={useColorModeValue('white', 'gray.800')}
     >
       {props.items.map(({
-        id, name, href, children,
+        id, label, path, childItems,
       }) => (
         <MobileNavItem
           key={id}
-          href={href}
-          name={name}
-        >
-          {children}
-        </MobileNavItem>
+          path={path ?? ''}
+          label={label ?? ''}
+          childItems={Array.isArray(childItems) ? childItems : []}
+        />
       ))}
       <SendFilesBtn isSolid />
     </Stack>

@@ -1,34 +1,32 @@
-import { string } from "prop-types";
-
 type Robots = {
   nofollow: string,
   noindex: string
-}
+};
 
 type TwitterD = {
   description: string,
   image: string,
   title: string
-}
+};
 
 type OpenGraphArticleD = {
   author: string
   modifiedTime: string
   publishedTime: string
   publisher: string
-}
+};
 
 type OpenGraphD = {
   author: string
   description: string
+  url: string
   image: string
   modifiedTime: string
   publishedTime: string
   publisher: string
   title: string
   type: string
-  url: string
-}
+};
 
 export interface PostSeoD {
   metaTitle: string
@@ -52,25 +50,25 @@ export interface PageSeoD {
 }
 
 export type QueryIncludeTypes =
-  | 'all'
-  | 'index'
-  | 'archive'
+    | 'all'
+    | 'index'
+    | 'archive';
 
 export type QueryIncludeD = {
   queryIncludes: QueryIncludeTypes
-}
+};
 
 export type PostByAuthorD = {
   slug: string,
   queryIncludes: QueryIncludeTypes
-}
+};
 
 export type PostByCategoryD = {
   categoryId: number,
   queryIncludes: QueryIncludeTypes
-}
+};
 
 export type PostByRecentD = {
   count: number,
   queryIncludes: QueryIncludeTypes
-}
+};

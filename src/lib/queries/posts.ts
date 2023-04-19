@@ -1,5 +1,5 @@
-import {gql} from '@apollo/client'
-import { POST_FIELDS } from "@/lib/queries/fragments";
+import { gql } from '@apollo/client';
+import { POST_FIELDS } from '@/lib/queries/fragments';
 
 export const QUERY_ALL_POSTS_INDEX = gql`
   ${POST_FIELDS}

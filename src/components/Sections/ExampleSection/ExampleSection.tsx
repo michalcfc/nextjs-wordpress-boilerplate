@@ -26,7 +26,7 @@ import { SectionWrapper } from '../components';
 import { Feature } from '@/components/Sections/ExampleSection/components';
 
 // data
-import { fetcher } from '@/utils/jsonFetcher';
+import { fetcher } from '@/lib/jsonFetcher';
 
 // types
 import { DataD } from '@/types/data';
@@ -58,7 +58,8 @@ const ExampleSection = () => {
             color="muted"
             fontSize="lg"
           >
-            Wszystkie projekty realizowane są w zgodzie z wymaganiami klientów i z zachowaniem ustalonych
+            Wszystkie projekty realizowane są w zgodzie z
+            wymaganiami klientów i z zachowaniem ustalonych
             terminów.
           </Text>
           <List spacing={3}>
@@ -102,12 +103,12 @@ const ExampleSection = () => {
           <VStack spacing={4}>
             {data.about.map(
               ({ id, name, desc }) => id % 2 === 0 && (
-                <Feature
-                  key={id}
-                  id={id}
-                  name={name}
-                  desc={desc}
-                />
+              <Feature
+                key={id}
+                id={id}
+                name={name}
+                desc={desc}
+              />
               ),
             )}
           </VStack>
@@ -117,12 +118,12 @@ const ExampleSection = () => {
           >
             {data.about?.map(
               ({ id, name, desc }) => id % 2 === 1 && (
-                <Feature
-                  key={id}
-                  id={id}
-                  name={name}
-                  desc={desc}
-                />
+              <Feature
+                key={id}
+                id={id}
+                name={name}
+                desc={desc}
+              />
               ),
             )}
           </VStack>

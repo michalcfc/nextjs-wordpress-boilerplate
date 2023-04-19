@@ -1,4 +1,3 @@
-import useSWR from 'swr';
 import React, {
   RefObject,
   useRef,
@@ -14,7 +13,6 @@ import {
   useDisclosure,
   useOutsideClick,
 } from '@chakra-ui/react';
-import { fetcher } from '@/utils/jsonFetcher';
 import {
   DesktopNav,
   MenuToggle,
@@ -26,13 +24,18 @@ import { SendFilesBtn } from '@/components/common/SendFilesBtn';
 import { isHomePage } from '@/utils/isHomePage';
 
 // hooks
+import useSite from '@/hooks/useSiteContext';
 import { useScrollHandler } from '@/hooks/useScrollHandler';
 
 // types
-import { DataD } from '@/types/data';
+import { findMenuByLocation } from '@/lib/menus';
+import {
+  MenuItem,
+  MenuLocationEnum,
+} from '@/generated/graphql';
 
 const Header = () => {
-  const { data, error } = useSWR<DataD>('/api/staticdata', fetcher);
+  const { menus } = useSite();
   const menuRef: RefObject<HTMLDivElement> = useRef(null);
   const isHomePagePath = isHomePage();
   const { isOpen, onToggle, onClose } = useDisclosure();
@@ -41,12 +44,10 @@ const Header = () => {
     ref: menuRef,
     handler: onClose,
   });
+  const navigationLocation = MenuLocationEnum.Primary;
+  const navigation = findMenuByLocation(menus, navigationLocation) as MenuItem[];
 
   const isDesktop = useBreakpointValue({ base: false, lg: true });
-
-  if (error) return <div>Failed to load</div>;
-
-  if (!data) return <div>Loading...</div>;
 
   return (
     <GridItem
@@ -81,7 +82,7 @@ const Header = () => {
           <HStack spacing={8}>
             {isDesktop ? (
               <DesktopNav
-                items={data.navItems}
+                items={navigation}
                 isScrolled={isScrolled}
               />
             ) : (
@@ -102,7 +103,7 @@ const Header = () => {
         <MobileNav
           ref={menuRef}
           isOpen={isOpen}
-          items={data.navItems}
+          items={navigation}
         />
       )}
     </GridItem>

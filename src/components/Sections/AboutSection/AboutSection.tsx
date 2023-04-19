@@ -57,23 +57,24 @@ const AboutSection = () => (
           color="muted"
           fontSize="lg"
         >
-          W Jachimov wierzymy, że podstawą owocnej współpracy jest budowa relacji partnerskich. Dlatego do
-          każdego klienta podchodzimy indywidualnie, wysłuchujemy jego pomysłów, tak by miał on możliwość
-          uczestniczenia na każdym etapie produkcji.
+          W Jachimov wierzymy, że podstawą owocnej współpracy jest budowa relacji partnerskich.
+          Dlatego do każdego klienta podchodzimy indywidualnie, wysłuchujemy jego pomysłów,
+          tak by miał on możliwość uczestniczenia na każdym etapie produkcji.
         </Text>
         <Text
           color="muted"
           fontSize="lg"
         >
-          Dla naszego zespołu żaden gatunek filmowy nie jest obcy. Dzięki temu śmiało możemy powiedzieć, że
-          nie znamy takiego słowa, jak ograniczenia.
+          Dla naszego zespołu żaden gatunek filmowy nie jest obcy.
+          Dzięki temu śmiało możemy powiedzieć, że nie znamy takiego słowa, jak ograniczenia.
         </Text>
         <Text
           color="muted"
           fontSize="lg"
         >
           Niezależnie od tego, czy zajmujemy się montażem programów
-          telewizyjnych, reklam, trailerów, czy kompilacji, a nawet prezentacji chętnie wykorzystujemy swoje
+          telewizyjnych, reklam, trailerów, czy kompilacji,
+          a nawet prezentacji chętnie wykorzystujemy swoje
           nieszablonowe myślenie.
         </Text>
         <Text

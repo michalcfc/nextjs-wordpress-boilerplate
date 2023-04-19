@@ -19,7 +19,7 @@ const HeroActionButtons: React.FC<HeroActionButtonsD> = ({
       <Button
         as="a"
         size="lg"
-        href="/upload"
+        href="/wyslij-pliki"
         bg="brand"
         colorScheme="brand"
         borderRadius="full"

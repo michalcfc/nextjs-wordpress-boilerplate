@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const CREATE_COMMENT = gql`
   mutation CREATE_COMMENT(
@@ -32,4 +32,4 @@ export const CREATE_COMMENT = gql`
       }
     }
   }
-`
+`;
