@@ -1,12 +1,18 @@
-import { useContext, createContext } from 'react';
+import {
+  createContext,
+  useContext,
+} from 'react';
 
 import config from '../../package.json';
 
 import { removeLastTrailingSlash } from '@/lib/utils';
 import { Menu } from '@/generated/graphql';
+import { PageSeoD } from '@/lib/types';
 
 export type SiteContextInterface = {
-  menus: Menu;
+  menus: Menu[]
+  homepage?: string
+  metadata: PageSeoD
 };
 
 export const SiteContext = createContext<SiteContextInterface>(null!);
