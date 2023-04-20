@@ -36,14 +36,14 @@ const SlugPage = ({ page, breadcrumbs }: AboutPageD) => {
 
   return (
     <PageWrapper
-      pageTitle={`${title}`}
-      seoTitle={`${metaTitle}`}
-      seoDesc={`${metaDescription}`}
+      pageTitle={`${title ?? ''}`}
+      seoTitle={`${metaTitle ?? ''}`}
+      seoDesc={`${metaDescription ?? ''}`}
       canonical="https://www.jachimov.pl/"
       op={{
         url: '/og-image.png',
-        title: `${og.title}`,
-        desc: `${og.description}`,
+        title: `${og.title ?? ''}`,
+        desc: `${og.description ?? ''}`,
         img: [
           {
             url: '/og-image.png',
